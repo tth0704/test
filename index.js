@@ -12,7 +12,7 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 
 app.use('/test', function(req, res){ 
-  console.log(req.ip);
+  console.log(req.ip.split(':').pop());
   res.status(200).json(`Server is running ${req.ip}`)
 });
 
