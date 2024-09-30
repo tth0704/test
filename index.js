@@ -11,7 +11,7 @@ app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-app.use('/', function(req, res){ 
+app.use('/test', function(req, res){ 
   console.log(req.ips);
   res.status(200).json(`Server is running ${req.ips}`)
 });
